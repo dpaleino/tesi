@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt,openany,titlepage,oneside]{scrbook}
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{appendix}
+\usepackage{tabularx}
+\usepackage{ltxtable}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[font=footnotesize,format=plain,labelfont={sf,bf}]{caption}
+\usepackage[doublespacing]{setspace}
+\usepackage{subfig}
+\usepackage{pstricks}
+\usepackage{sidecap}
+\usepackage[style=verbose-inote,dashed=false,pageref=true]{biblatex}
+\usepackage{booktabs}
+%\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{makeidx}
+\usepackage[italian]{varioref}
+\usepackage{hyperref}
+
+\bibliography{biblio}
+\renewbibmacro{in:}{}
+%\bibliographystyle{natbib_ita}
+%\bibliographystyle{foo}
+
+\addto\captionsitalian{\renewcommand{\figurename}{Fig.}}
+
+\makeindex
+
+\title{Valutazione di analisi cefalometriche tradizionali vs. analisi cefalometriche proporzionali: effetti sulla diagnosi e sulle scelte terapeutiche}
+\date{}
+\hypersetup{
+  colorlinks=false,
+  pdftitle={Valutazione di analisi cefalometriche tradizionali vs. analisi cefalometriche proporzionali: effetti sulla diagnosi e sulle scelte terapeutiche},
+  pdfauthor={David Paleino},
+  pdfsubject={Cephalometry analysis}
+}
+
+\renewcommand{\appendixtocname}{Appendici}
+\renewcommand{\appendixpagename}{Appendici}
+
+\newcommand{\angolo}[1]{$\widehat{#1}$}
+\newcommand{\punto}[1]{\textit{#1}}
+
+% interlinea
+%\linespread{2.5}
+\setstretch{2.5}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+\mainmatter
+\include{chapters/introduzione}
+\include{chapters/storia_della_cefalometria}
+\include{chapters/crescita_cranio_facciale}
+\part*{Analisi convenzionali}
+\include{chapters/steiner}
+\part*{Analisi proporzionali}
+\include{chapters/enlow}
+\include{chapters/delaire}
+\include{chapters/sassouni}
+\include{chapters/discussione}
+\include{chapters/conclusioni}
+
+\appendix
+\appendixpage
+\noappendicestocpagenum
+\addappheadtotoc
+
+\chapter{Punti di repere cefalometrici}
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=\textwidth]{./images/face.pdf}
+ % sar_istopatologia.jpg: 1123x794 pixel, 72dpi, 39.62x28.01 cm, bb=
+ \caption{Punti di repere cefalometrici}
+\end{figure}
+\LTXtable{\textwidth}{inc/punti_repere.tex}
+
+\begin{refsegment}
+\printbibliography
+\end{refsegment}
+
+\end{document}
