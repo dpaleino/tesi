@@ -20,6 +20,7 @@
 \usepackage{makeidx}
 \usepackage[italian]{varioref}
 \usepackage{hyperref}
+\usepackage{remreset}
 
 \addbibresource{biblio.bib}
 \renewbibmacro{in:}{}
@@ -44,10 +45,14 @@
 
 \newcommand{\angolo}[1]{$\widehat{#1}$}
 \newcommand{\punto}[1]{\textit{#1}}
+\newcommand{\piano}[2]{\punto{#1}-\punto{#2}}
 
 % interlinea
 %\linespread{2.5}
 \setstretch{2.5}
+
+% package remreset: don't reset footnote counter at each chapter
+\makeatletter\@removefromreset{footnote}{chapter}\makeatother
 
 \begin{document}
 \frontmatter
