@@ -1,0 +1,13 @@
+*.kilepr
+*.tex~
+*backup
+*.aux
+*.bak
+*.run.xml
+*-blx.bib
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.toc
