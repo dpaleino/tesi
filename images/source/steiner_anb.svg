@@ -8,10 +8,34 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="2152"
    height="1306"
-   id="svg3068">
+   id="svg3068"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="steiner_anb.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="749"
+     id="namedview55"
+     showgrid="false"
+     inkscape:zoom="0.29128901"
+     inkscape:cx="919.95365"
+     inkscape:cy="606.7139"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3068" />
   <metadata
      id="metadata3074">
     <rdf:RDF>
@@ -20,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -100,23 +124,23 @@
   <path
      d="m 234.54545,484.18182 509.09091,-135.45455 10,455.45455"
      id="path3082"
-     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+     style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
   <path
      d="m 1009.675,501.81442 504.2821,-115.51837 -2.2215,737.54035 0,0 0,0 0,0"
      id="path3084"
-     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+     style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
   <path
      d="m 1910.4961,1139.387 1.1108,-739.76191 12.2183,449.8552"
      id="path3086"
-     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+     style="fill:none;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
   <path
      d="m 600.6006,386.75933 143.24324,-38.39554 2.98156,143.3505 C 643.19425,507.66143 606.00054,462.65439 600.6006,386.75933 z"
      id="path3088"
-     style="fill:url(#linearGradient3864);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+     style="fill:url(#linearGradient3864);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
   <path
      d="m 1367.6514,419.93585 146.6915,-34.60243 -0.6686,144.62888 c -103.6311,15.94714 -140.6229,-34.13139 -146.0229,-110.02645 z"
      id="path3088-2"
-     style="fill:url(#linearGradient3881);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+     style="fill:url(#linearGradient3881);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:3.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
   <path
      d="m 1911.3502,533.18635 0.8449,-132.0644 2.8918,132.0644 c -1.2455,1.52222 -2.4911,1.61448 -3.7367,0 z"
      id="path3900"
