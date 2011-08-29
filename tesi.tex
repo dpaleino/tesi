@@ -23,7 +23,7 @@
 \usepackage{amstext}
 \usepackage{pdflscape}
 \usepackage{dcolumn}
-\usepackage{varwidth}
+\usepackage{environ}
 
 \addbibresource{biblio.bib}
 \renewbibmacro{in:}{}
@@ -51,9 +51,19 @@
 \renewcommand{\appendixtocname}{Appendici}
 \renewcommand{\appendixpagename}{Appendici}
 
+\makeatletter
 \newcommand{\angolo}[1]{$\widehat{#1}$}
 \newcommand{\punto}[1]{\textit{#1}}
 \newcommand{\piano}[2]{\punto{#1}-\punto{#2}}
+
+\newenvironment{centeredcaption}[1]
+  {\def\table@caption{#1}%
+   \Collect@Body\measure@table}
+  {\begin{minipage}{\table@width}\centering
+   \expandafter\caption\expandafter{\table@caption}
+   \box0\end{minipage}}
+\def\measure@table#1{\sbox\z@{#1}\edef\table@width{\the\wd\z@}}
+\makeatother
 
 % interlinea
 %\linespread{2.5}
