@@ -22,6 +22,9 @@
 \usepackage{hyperref}
 \usepackage{remreset}
 \usepackage{amstext}
+\usepackage{pdflscape}
+\usepackage{dcolumn}
+\usepackage{varwidth}
 
 \addbibresource{biblio.bib}
 \renewbibmacro{in:}{}
@@ -82,19 +85,21 @@
 
 \appendix
 \appendixpage
-\noappendicestocpagenum
-\addappheadtotoc
+%\noappendicestocpagenum
+%\addappheadtotoc
 
-\chapter{Punti di repere cefalometrici}
-\begin{figure}[h!]
- \centering
- \includegraphics[width=\textwidth]{./images/face.pdf}
- % sar_istopatologia.jpg: 1123x794 pixel, 72dpi, 39.62x28.01 cm, bb=
- \caption{Punti di repere cefalometrici}
-\end{figure}
-\LTXtable{\textwidth}{inc/punti_repere.tex}
+\include{appendices/misurazioni}
+\include{appendices/repere}
+
+
+%\begin{figure}[h!]
+% \centering
+% \includegraphics[width=\textwidth]{./images/face.pdf}
+% \caption{Punti di repere cefalometrici}
+%\end{figure}
 
 %\begin{refsegment}
+\normalsize
 \printbibliography
 %\end{refsegment}
 
