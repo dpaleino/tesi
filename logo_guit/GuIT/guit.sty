@@ -1,0 +1,165 @@
+%%
+%% This is file `guit.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% guit.dtx  (with options: `style')
+%% 
+%%  Copyright 2003, 2004 Gruppo Utilizzatori Italiani di TeX
+%% 
+%%  This work may be distributed and/or modified under the
+%%  conditions of the LaTeX Project Public License, either
+%%  version 1.3a of this license or (at your option) any
+%%  later version.
+%%  The latest version of the license is in
+%%     http://www.latex-project.org/lppl.txt
+%% 
+%%  Author: Emanuele Vicentini
+%%          (emanuelevicentini at yahoo dot it)
+%% 
+%%  This work has the LPPL maintenance status "author-maintained".
+%% 
+%%  This work consists of the files: README, guit.dtx, guit.ins and the
+%%  derived files guit.sty and guittext.tex
+%% 
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{guit}[2004/11/15 v0.8.1 Logo del GuIT]
+\RequirePackage{url}
+\newif\if@guit@colorized
+\@guit@colorizedtrue
+\newif\if@guit@always@colorized
+\newif\if@guit@xcolorized
+\newif\if@guit@link
+\DeclareOption{color}{%
+  \@guit@colorizedtrue
+  \@guit@always@colorizedtrue}
+\DeclareOption{nocolor}{%
+  \@guit@colorizedfalse
+  \@guit@always@colorizedfalse}
+\DeclareOption{link}{\@guit@linktrue}
+\ProcessOptions\relax
+\DeclareRobustCommand*{\GuITcolor}{%
+  \@ifstar\x@guit@color@imp\@guit@color@imp}
+\if@guit@colorized
+  \IfFileExists{xcolor.sty}%
+    {\RequirePackage{xcolor}\@guit@xcolorizedtrue}%
+    {\RequirePackage{color}\@guit@xcolorizedfalse}
+  \if@guit@xcolorized
+    \newcommand*{\@guit@color@imp}[2][cmyk]{%
+      \xdefinecolor{coloredelGuIT}{#1}{#2}}
+    \newcommand*{\x@guit@color@imp}[2][\@empty]{%
+      \ifx\@empty#1%
+        \colorlet{coloredelGuIT}{#2}%
+      \else
+        \colorlet{coloredelGuIT}[#1]{#2}%
+      \fi}
+  \else
+    \newcommand*{\@guit@color@imp}[2][cmyk]{%
+      \definecolor{coloredelGuIT}{#1}{#2}}
+    \newcommand*{\x@guit@color@imp}[2][]{\relax}
+  \fi
+  \GuITcolor{1,0,1,0}
+\else
+  \newcommand*{\@guit@color@imp}[2][]{\relax}
+  \newcommand*{\x@guit@color@imp}[2][]{\relax}
+\fi
+\let\guitcolor\GuITcolor
+\def\@guit@url{http://www.guitex.org}
+\if@guit@link
+  \RequirePackage{hyperref}
+  \def\@guitimp#1{%
+    \begingroup
+      \Hy@colorlinksfalse
+      \def\@pdfborder{0 0 0}%
+      \href{\@guit@url}{\@@guitimp{#1}}%
+    \endgroup}
+\else
+  \def\@guitimp#1{\@@guitimp{#1}}
+\fi
+\def\@gen@guit@fntcmd#1#2#3#4#5{%
+  \@namedef{@guit#1}{%
+    \fontfamily{#1}\mdseries\scshape
+    \@colorize@guit g\kern #2\lower #3\hbox{u}%
+    \@decolorize@guit\kern #4 I\@colorize@guit\kern #5 t}}
+\def\@guitcmr{%
+  \fontencoding{OT1}\fontfamily{cmr}\mdseries\scshape
+  \@colorize@guit g\kern -0.26em\lower 0.714ex\hbox{u}%
+  \@decolorize@guit\kern -0.125em I\@colorize@guit\kern -0.125em t}
+\@gen@guit@fntcmd{ptm}{-0.27em}{0.5475ex}{-0.125em}{-0.125em}
+\@gen@guit@fntcmd{ppl}{-0.276em}{0.717ex}{-0.125em}{-0.125em}
+\@gen@guit@fntcmd{pnc}{-0.322em}{0.678ex}{-0.125em}{-0.125em}
+\@gen@guit@fntcmd{put}{-0.285em}{0.61ex}{-0.125em}{-0.125em}
+\@gen@guit@fntcmd{bch}{-0.28em}{0.58ex}{-0.125em}{-0.125em}
+\@gen@guit@fntcmd{pbk}{-0.3em}{0.59ex}{-0.125em}{-0.125em}
+\def\@@guitimp#1{%
+  \begingroup
+    \@ifundefined{@guit#1}{\@guitcmr}{\@nameuse{@guit#1}}%
+  \endgroup}
+\if@guit@colorized
+  \newcommand*{\@guit@color@on}[1][\f@family]{%
+    \def\@colorize@guit{\color{coloredelGuIT}}%
+    \def\@decolorize@guit{\normalcolor}%
+    \@guitimp{#1}\ignorespaces}
+\else
+  \newcommand*{\@guit@color@on}[1][\f@family]{%
+    \def\@colorize@guit{\normalcolor}%
+    \def\@decolorize@guit{\normalcolor}%
+    \@guitimp{#1}\ignorespaces}
+\fi
+\if@guit@always@colorized
+  \let\@guit@color@off\@guit@color@on
+\else
+  \newcommand*{\@guit@color@off}[1][\f@family]{%
+    \def\@colorize@guit{\normalcolor}%
+    \def\@decolorize@guit{\normalcolor}%
+    \@guitimp{#1}\ignorespaces}
+\fi
+\DeclareRobustCommand*{\GuIT}{%
+  \@ifstar\@guit@color@on\@guit@color@off}
+\let\guit\GuIT
+\if@guit@colorized
+  \DeclareRobustCommand*{\swapGuITcommands}{%
+    \begingroup
+      \let\reserved@a\@guit@color@on
+      \global\let\@guit@color@on\@guit@color@off
+      \global\let\@guit@color@off\reserved@a
+    \endgroup
+    \PackageWarning{guit}{Swapping \string\GuIT* and \string\GuIT}}
+\else
+  \let\swapGuITcommands\relax
+\fi
+\if@guit@link
+  \DeclareRobustCommand*{\GuITtext}{%
+    \href{\@guit@url}{Gruppo Utilizzatori Italiani di \TeX}}
+\else
+  \DeclareRobustCommand*{\GuITtext}{%
+    Gruppo Utilizzatori Italiani di \TeX}
+\fi
+\let\guittext\GuITtext
+\DeclareRobustCommand*{\GuITurl}{%
+  \expandafter\url\expandafter{\@guit@url}}
+\let\guiturl\GuITurl
+\DeclareRobustCommand*{\GuITforum}{%
+  \expandafter\url\expandafter{\@guit@url /phpbb}}
+\let\guitforum\GuITforum
+\DeclareRobustCommand*{\GuITmeeting}{%
+  \@ifstar\@guit@meeting@color@on\@guit@meeting@color@off}
+\def\@guit@meeting@color@on{%
+  \begingroup
+    \fontencoding{OT1}\fontfamily{cmr}\fontseries{m}\selectfont
+    \guit*\@guit@meeting@part
+  \endgroup
+  \ignorespaces}
+\def\@guit@meeting@color@off{%
+  \begingroup
+    \fontencoding{OT1}\fontfamily{cmr}\fontseries{m}\selectfont
+    \guit\@guit@meeting@part
+  \endgroup
+  \ignorespaces}
+\def\@guit@meeting@part{%
+  \kern -2.02ex\lower 1.25ex\hbox{\textit{meeting}}}
+\let\guitmeeting\GuITmeeting
+\endinput
+%%
+%% End of file `guit.sty'.
