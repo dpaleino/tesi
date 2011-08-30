@@ -24,6 +24,7 @@
 \usepackage{pdflscape}
 \usepackage{dcolumn}
 \usepackage{environ}
+\usepackage{frontespizio}
 
 \addbibresource{biblio.bib}
 \renewbibmacro{in:}{}
@@ -73,8 +74,21 @@
 \makeatletter\@removefromreset{footnote}{chapter}\makeatother
 
 \begin{document}
+\begin{frontespizio}
+\Universita{Palermo}
+\Logo[3.5cm]{images/unipa}
+\Facolta{Medicina e Chirurgia}
+\Corso{Odontoiatria e Protesi Dentaria}
+\Annoaccademico{2010--2011}
+%\Titoletto{Tesi di laurea magistrale}
+\Titolo{Valutazione di analisi cefalometriche\\tradizionali vs. proporzionali:\\effetti sulla diagnosi}
+\Candidato[0506251]{David Paleino}
+\Relatore{Ch.mo Prof. Pietro Messina}
+\Correlatore{Dott. Maurizio Lotti}
+\end{frontespizio}
+\cleardoubleemptypage
 \frontmatter
-\maketitle
+%\maketitle
 \tableofcontents
 \mainmatter
 \pagestyle{plain}
