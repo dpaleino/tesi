@@ -14,3 +14,8 @@
 *.bbl
 *.blg
 *.fdb_latexmk
+frontespizio/*
+logo_guit/*
+!frontespizio/*.sty
+!logo_guit/GuIT/*.sty
+tesi-frn.*
