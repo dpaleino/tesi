@@ -1,1 +1,114 @@
 \chapter{Discussione}
+Verranno di seguito analizzati i risultati delle misurazioni effettuate su due piani:  antero-posteriore (classe scheletrica) e verticale (rotazione del piano occlusale). Prima, però, è necessario illustrare quali strumenti statistici sono stati utilizzati per l'analisi dei dati.
+
+\section{Strumenti statistici}
+\subsection{Scostamento medio}
+\label{scostamento_medio}
+Questo strumento permette di valutare il grado di \emph{dispersione} dei valori attorno alla loro media. Questo è molto utile nella componente verticale dell'analisi delle controparti di Enlow: essendo un'analisi proporzionale non è possibile riferire i valori ad un riferimento preciso, ma possiamo confrontarli tra di loro.
+
+Lo \emph{scostamento medio} è definito come \emph{la media degli scarti assoluti dei valori osservati rispetto al loro valore medio}:
+
+\begin{equation}
+\label{eq:scostamento_medio}
+\varepsilon = \frac{1}{n}\sum_{i=1}^n{\left(\left|x_i - \frac{1}{n}\sum_{k=1}^n x_k\right|\right)}
+\end{equation}
+
+Uno scostamento elevato significherà che i valori sono lontani tra di loro (e quindi falliranno il requisito imposto da Enlow che abbiano ``minime variazioni''); un numero basso significherà invece che i valori differiscono in misura minore; un valore pari a 0 indica che i valori sono uguali tra di loro.
+
+\subsection{$\kappa$ di Fleiss}
+Questo metodo permette di valutare quanto la concordanza delle valutazioni di due o più osservatori, su un determinato campione, sia dovuto al caso, e stimare quindi la concordanza depurata dal caso stesso.
+
+%Questo, però, include anche quei casi per cui la concordanza è dovuta solamente al caso. Per eliminare questi casi, e normalizzare il dato, è possibile ricorrere alla \emph{$\kappa$ di Fleiss}\footnote{http://en.wikipedia.org/wiki/Fleiss'_kappa}. Questo valore stima quindi la concordanza depurata da quanto dovuto al caso.
+
+\begin{equation}
+\label{eq:kappa_fleiss}
+\kappa = \frac{\overline{P} - \overline{P}_e}{1 - \overline{P}_e}
+\end{equation}
+
+Il denominatore $1 - \overline{P}_e$ espime il grado di concordanza ottenibile al di fuori del caso; il numeratore $\overline{P} - \overline{P}_e$ esprime la concordanza ottenuta al di fuori del caso. Se le analisi fossero in completo accordo, allora $\kappa = 1$, all'opposto, se non ci fosse accordo, oltre a quello dovuto al caso, si avrebbe $\kappa \leq 0$.
+
+Sia $N$ il numero totale del campione, $n$ il numero degli osservatori e $k$ il numero di categorie assegnate ai vari componenti del campione. I soggetti vengono numerati da $i = 1, \ldots N$, e le categorie da $j = 1, \ldots k$. Sia $n_{ij}$ il numero di osservatori che hanno assegnato il soggetto $i$ alla categoria $j$.
+
+Prima è necessario calcolare $p_i$, che è la proporzione delle valutazioni in quella categoria rispetto a tutte le categorie:
+\begin{equation*}
+p_j = \frac{1}{Nn}\sum_{i=1}^N n_{ij}
+\end{equation*}
+Questo viene usato per calcolare $\overline{P}_e$:
+\begin{equation}
+\overline{P}_e = \sum_{j=1}^k p^2_j
+\end{equation}
+$P_i$ rappresenta il grado di concordanza tra gli osservatori per il soggetto $i$-esimo.
+\begin{align*}
+P_i &= \frac{1}{n(n-1)}\sum_{j=1}^k n_{ij}(n_{ij}-1) \\
+&= \frac{1}{n(n-1)}\sum_{j=1}^k (n^2_{ij}-n_{ij}) \\
+&= \frac{1}{n(n-1)}[(\sum_{j=1}^k n^2_{ij}) - n]
+\end{align*}
+$\overline{P}$, utilizzato nell'equazione principale, è la media dei $P_i$.
+\begin{align*}
+\overline{P} &= \frac{1}{N}\sum_{i=1}^N P_i \\
+&= \frac{1}{Nn(n-1)}(\sum_{i=1}^N\sum_{j=1}^k n^2_{ij} - Nn)
+\end{align*}
+Per semplificare, in questa tesi i confronti sono stati fatti a coppie, quindi il numero di osservatori è sempre $2$. Con questa semplificazione, le equazioni diventano:
+\begin{equation}
+P_i = \frac{1}{2}[(\sum_{j=1}^k n^2_{ij}) - 2]
+\end{equation}
+\begin{equation}
+\overline{P} = \frac{1}{2N}(\sum_{i=1}^N\sum_{j=1}^k n^2_{ij} - 2N)
+\end{equation}
+Il valore di $\kappa$ viene valutato in base ad una tabella (\vref*{tab:significato_kappa}), proposta da Landis e Koch\footcite{Landis1977}.
+
+\begin{table}
+\centering
+\caption{Significato dei valori di $\kappa$}
+\label{tab:significato_kappa}
+\begin{tabular}{ll}
+\toprule
+\multicolumn{1}{c}{\textbf{$\kappa$}} & \multicolumn{1}{c}{significato} \\
+\midrule
+$< 0$ & scarso accordo \\
+$0,01 - 0,20$ & leggero accordo \\
+$0,21 - 0,40$ & buon accordo \\
+$0,41 - 0,61$ & moderato accordo \\
+$0,61 - 0,81$ & sostanziale accordo \\
+$0,81 - < 1,00$ & accordo quasi perfetto \\
+$1,00$ & accordo perfetto \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Classe scheletrica}
+
+\section{Rotazione del piano occlusale}
+Per poter valutare la rotazione del piano occlusale è necessario considerare che l'analisi delle controparti di Enlow non fornisce dei valori di riferimento, per cui bisogna valutare il rapporto delle controparti verticali tra di loro. Per far questo, verrà utilizzato lo \emph{scostamento medio} descritto \vref{scostamento_medio}. Oltre a questo però, bisogna prendere in considerazione il rapporto tra la componente verticale anteriore e le altre due controparti: se essa è maggiore, il piano occlusale sarà in post-rotazione; se è minore anche di una sola delle due, sarà in antero-rotazione. Per poter definire il tipo di rotazione del piano occlusale, è necessario scegliere un $\varepsilon$ appropriato al di sopra del quale è possibile definire \emph{in squilibrio} le controparti verticali di Enlow, e perciò parlare di una eccessiva inclinazione nell'uno o nell'altro senso.
+
+Secondo Giannì, l'angolo cranio-occlusale definisce l'inclinazione del piano occlusale: il suo valore medio è $14 \pm 3°$; valori minori indicano ante-rotazione occlusale; valori superiori indicano post-rotazione.
+
+Il grafico \vref{graph:inclinazione_pof_concordanza} mostra la variazione della concordanza \emph{semplice} tra l'analisi delle controparti di Enlow e l'analisi di Giannì (angolo cranio-occlusale), al variare di $\varepsilon$.
+
+\begin{figure}[ht!]
+\centering
+\input{dati/inclinazione_pof_concordanza.tex}
+\caption{Concordanza semplice tra Enlow e Giannì sull'inclinazione del piano occlusale}
+\label{graph:inclinazione_pof_concordanza}
+\end{figure}
+
+Questo però include anche quei casi per cui la concordanza è dovuta solamente al caso. Per eliminare questi casi utilizzeremo la statistica \emph{$\kappa$ di Fleiss}, così da eliminare la concordanza casuale. Il grafico \vref{graph:inclinazione_pof_kappa} mostra la variazione di questa concordanza \emph{depurata} al variare di $\varepsilon$.
+
+\begin{figure}[ht!]
+\centering
+\input{dati/inclinazione_pof_kappa.tex}
+\caption{Concordanza depurata tra Enlow e Giannì sull'inclinazione del piano occlusale}
+\label{graph:inclinazione_pof_depurata}
+\end{figure}
+
+Com'è possibile desumere da quest'ultimo grafico, gli unici valori di $\varepsilon$ per cui $\kappa$ è positivo (e quindi la concordanza non è tutta dovuta al caso) sono quelli tra 1 e 7 (compresi). Tra questi, un $\varepsilon = 4$ mostra la più alta percentuale di concordanza: 86,21\% quella semplice, e 71,95\% quella depurata dal caso.
+
+Le diagnosi non coincidono in $4$ pazienti: \#3, \#5, \#18 e \#19.
+
+Il paziente \#5 presenta un angolo cranio-occlusale di $18°$, quindi di solo $1°$ al di fuori del range di normalità (e le concordanze salirebbero a 89,66\% e 79,26\%, rispettivamente).
+
+Il paziente \#18 ha un angolo cranio-occlusale di $13°$, e un $\varepsilon = 0,\overline{22}$, ma la componente verticale anteriore è $0,5 mm$ più corta rispetto alla componente verticale posteriore. Questo è dovuto all'eccessiva ante-inclinazione del piano craniale di riferimento \piano{FMS}{Se}, che falsa l'effettiva inclinazione del piano occlusale. Poiché la differenza è minima, anche questo paziente può essere incluso nel range di normalità (e, di nuovo, le concordanze tra le due analisi salirebbero rispettivamente a 93,10\% e 85,78\%.
+
+Gli altri due pazienti (\#3 e \#19) presentano diagnosi effettivamente diverse: normo-inclinati per Enlow, post-ruotati per Giannì ($21°$ in entrambi i casi).
+
+È possibile quindi concludere che, considerando un $\varepsilon = 4$ in Enlow (cioè, considerando il \punto{PM} come medio rispetto agli altri due, la differenza tra \punto{CVA} e \punto{CVP} è di 12 mm), esiste un \emph{sostanziale accordo} tra le due analisi.
