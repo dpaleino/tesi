@@ -68,6 +68,37 @@
    \expandafter\caption\expandafter{\table@caption}
    \box0\end{minipage}}
 \def\measure@table#1{\sbox\z@{#1}\edef\table@width{\the\wd\z@}}
+
+\newcommand{\paziente}[4]{
+\section*{Paziente #1: #2, #3, #4aa.}
+\label{paz:#2}
+\null\vspace*{\stretch{1}}
+\begin{center}
+\fbox{\includegraphics[keepaspectratio,width=\columnwidth,height=.7\textheight]{./pazienti/rx/#2.jpg}}
+\end{center}
+\null\vspace*{\stretch{1}}
+\clearpage
+\begin{figure}[p]
+\centering
+\fbox{\includegraphics[keepaspectratio,width=.85\columnwidth,height=.85\textheight]{./pazienti/tracciati/#2E.pdf}}
+\caption{Analisi delle controparti di Enlow}
+\label{fig:#2E}
+\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\fbox{\includegraphics[keepaspectratio,width=.85\columnwidth,height=.85\textheight]{./pazienti/tracciati/#2G.pdf}}
+\caption{Analisi di Giannì e indice Wits}
+\label{fig:#2G}
+\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\fbox{\includegraphics[keepaspectratio,width=.85\columnwidth,height=.85\textheight]{./pazienti/tracciati/#2R.pdf}}
+\caption{Analisi antero-posteriore di Ricketts}
+\label{fig:#2R}
+\end{figure}
+}
 \makeatother
 
 % interlinea
@@ -116,6 +147,7 @@
 %\noappendicestocpagenum
 %\addappheadtotoc
 
+\include{appendices/pazienti}
 \include{appendices/misurazioni}
 \include{appendices/repere}
 \cleardoublepage
