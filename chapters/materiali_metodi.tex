@@ -18,7 +18,8 @@ Lo \emph{scostamento medio} è definito come \emph{la media degli scarti assolut
 Uno scostamento elevato significherà che i valori sono lontani tra di loro (e quindi falliranno il requisito imposto da Enlow che abbiano ``minime variazioni''); un numero basso significherà invece che i valori differiscono in misura minore; un valore pari a 0 indica che i valori sono uguali tra di loro.
 
 \section{$\chi^2$ di Pearson}
-Questo metodo controlla la validità di un'\emph{ipotesi nulla} valutando se la frequenza di distribuzione di certi eventi osservati in un campione è consistente con una particolare distribuzione teorica. Gli eventi considerati devono essere mutualmente esclusivi, ed avere una probabilità complessiva del $100\%$.
+\label{sec:chi-square}
+Questo metodo\footcite{Plackett1983} controlla la validità di un'\emph{ipotesi nulla} valutando se la frequenza di distribuzione di certi eventi osservati in un campione è consistente con una particolare distribuzione teorica. Gli eventi considerati devono essere mutualmente esclusivi, ed avere una probabilità complessiva del $100\%$.
 
 \begin{equation}
 \label{eq:chi_square}
@@ -30,7 +31,7 @@ Il \emph{chi quadro} viene calcolato misurando la differenza tra ogni singola fr
 Questo valore viene quindi ricercato in tabelle precompilate che mettono in relazione il $\chi^2$ al valore $p$: quest'ultimo rappresenta la probabilità di ottenere un risultato pari o più estremo di quello osservato, supposta vera l'ipotesi nulla. Un valore $p$ di 0,05 o minore viene solitamente considerato \emph{statisticamente significativo}, ossia la deviazione osservata dall'ipotesi nulla è significativa.
 
 \section{$\kappa$ di Fleiss}
-Questo metodo permette di valutare quanto la concordanza delle valutazioni di due o più osservatori, su un determinato campione, sia dovuto al caso, e stimare quindi la concordanza depurata dal caso stesso.
+Questo metodo\footcite{Fleiss1971} permette di valutare quanto la concordanza delle valutazioni di due o più osservatori, su un determinato campione, sia dovuto al caso, e stimare quindi la concordanza depurata dal caso stesso.
 \begin{equation}
 \label{eq:kappa_fleiss}
 \kappa = \frac{\overline{P} - \overline{P}_e}{1 - \overline{P}_e}
