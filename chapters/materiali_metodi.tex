@@ -17,6 +17,18 @@ Lo \emph{scostamento medio} è definito come \emph{la media degli scarti assolut
 
 Uno scostamento elevato significherà che i valori sono lontani tra di loro (e quindi falliranno il requisito imposto da Enlow che abbiano ``minime variazioni''); un numero basso significherà invece che i valori differiscono in misura minore; un valore pari a 0 indica che i valori sono uguali tra di loro.
 
+\section{$\chi^2$ di Pearson}
+Questo metodo controlla la validità di un'\emph{ipotesi nulla} valutando se la frequenza di distribuzione di certi eventi osservati in un campione è consistente con una particolare distribuzione teorica. Gli eventi considerati devono essere mutualmente esclusivi, ed avere una probabilità complessiva del $100\%$.
+
+\begin{equation}
+\label{eq:chi_square}
+\chi^2 = \sum_{i=1}^N \frac{{(O_i-E_i)}^2}{E_i}
+\end{equation}
+
+Il \emph{chi quadro} viene calcolato misurando la differenza tra ogni singola frequenza osservata ($O_i$) e teorica ($E_i$), per ogni possibile categoria, ponendoli al quadrato, dividendoli per la frequenza teorica e sommando i risultati. Una seconda parte nell'esecuzione di questo metodo consiste nello stabilire i \emph{gradi di libertà}, che sono essenzialmente il numero di categorie considerate meno uno.
+
+Questo valore viene quindi ricercato in tabelle precompilate che mettono in relazione il $\chi^2$ al valore $p$: quest'ultimo rappresenta la probabilità di ottenere un risultato pari o più estremo di quello osservato, supposta vera l'ipotesi nulla. Un valore $p$ di 0,05 o minore viene solitamente considerato \emph{statisticamente significativo}, ossia la deviazione osservata dall'ipotesi nulla è significativa.
+
 \section{$\kappa$ di Fleiss}
 Questo metodo permette di valutare quanto la concordanza delle valutazioni di due o più osservatori, su un determinato campione, sia dovuto al caso, e stimare quindi la concordanza depurata dal caso stesso.
 \begin{equation}
