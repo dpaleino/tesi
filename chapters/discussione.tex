@@ -60,6 +60,45 @@ Ricketts & \cellcolor[gray]{.8} $0,0101$ & $0,1690$ & \cellcolor[gray]{.8} $0,00
 
 Questi dati mettono in evidenza come, considerando \emph{standard} le analisi di Giannì e Ricketts, si ottengano valori $p$ statisticamente significativi quando paragonate con le analisi di Enlow, Wits e Coben. Questo significa che l'\emph{ipotesi nulla} è rigettata per queste tre analisi, ossia le differenze tra le diagnosi effettuate sono \emph{statisticamente significative}. Sembrerebbe che, invece, considerando come standard l'indice di Wits, le differenze siano meno significative, eccezion fatta per l'analisi di Giannì.
 
+Quest'analisi, però, mette a confronto frequenze cumulative: è possibile che tutti i pazienti inseriti in una categoria secondo un'analisi, vengano inseriti in un'altra categoria secondo un'altra analisi. È necessario quindi analizzare la concordanza tra diagnosi per ogni singolo paziente. La tabella \vref{tab:classe_scheletrica_concordanza} mostra le percentuali di concordanza \emph{semplice}, intesa come il rapporto tra il numero di pazienti le cui diagnosi coincidono e il numero totale di soggetti.
+
+\begin{table}
+\centering
+\caption{Concordanza semplice sulla classe scheletrica}
+\label{tab:classe_scheletrica_concordanza}
+\begin{tabular}{>{\bfseries}c*{5}{D{,}{,}{2.2}}}
+\toprule
+ & \multicolumn{1}{c}{\textbf{Enlow}} & \multicolumn{1}{c}{\textbf{Giannì}} & \multicolumn{1}{c}{\textbf{Wits}} & \multicolumn{1}{c}{\textbf{Ricketts}} & \multicolumn{1}{c}{\textbf{Coben \punto{Pog}}} \\
+\midrule
+Giannì & 58,62 & & 51,72 & 65,52 & 55,17 \\
+Wits & 62,07 & 51,72 & & 65,52 & 48,28 \\
+Ricketts & 68,97 & 65,52 & 65,52 & & 34,48 \\
+Coben \punto{Pog} & 37,93 & 55,17 & 48,28 & 34,48 & \\
+Coben \punto{B} & 44,83 & 55,17 & 55,17 & 41,38 & 93,1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Seppur non molto alte, molte percentuali superano il $50\%$. Questo tipo di concordanza, però, include quei casi in cui la coincidenza di diagnosi è dovuta esclusivamente al caso. Per eliminare questi casi, è possibile utilizzare la \emph{$\kappa$ di Fleiss}. I valori risultanti sono riportati in tabella \vref{tab:classe_scheletrica_kappa}.
+
+\begin{table}
+\centering
+\caption{Concordanza depurata dal caso sulla classe scheletrica}
+\label{tab:classe_scheletrica_kappa}
+\begin{tabular}{>{\bfseries}c*{5}{D{,}{,}{2.2}}}
+\toprule
+ & \multicolumn{1}{c}{\textbf{Enlow}} & \multicolumn{1}{c}{\textbf{Giannì}} & \multicolumn{1}{c}{\textbf{Wits}} & \multicolumn{1}{c}{\textbf{Ricketts}} & \multicolumn{1}{c}{\textbf{Coben \punto{Pog}}} \\
+\midrule
+Giannì & 31,83 & & 20,47 & 35,27 & 24,98 \\
+Wits & 42,05 & 20,47 & & 42,74 & 20,62 \\
+Ricketts & 49,37 & 35,27 & 42,74 & & -7,93 \\
+Coben \punto{Pog} & 4,31 & 24,98 & 20,62 & 34,48 &  \\
+Coben \punto{B} & 15,33 & 26,44 & 31,89 & 5,83 & 89,31 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Questi dati denotano un'importante discordanza tra le varie analisi considerate.
 
 \section{Altezza facciale inferiore}
 
