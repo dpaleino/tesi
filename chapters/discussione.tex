@@ -174,3 +174,41 @@ Il paziente \#18 (immagini a pagina \pageref{paz:TILO1999}) ha un angolo cranio-
 Gli altri due pazienti (\#3 e \#19, pagina \pageref{paz:MASCHI2000} e \pageref{paz:ELITRI1998} rispettivamente) presentano diagnosi effettivamente diverse: normo-inclinati per Enlow, post-ruotati per Giannì ($21°$ in entrambi i casi).
 
 È possibile quindi concludere che, considerando un $\varepsilon = 4$ in Enlow (cioè, considerando il \punto{PM} come medio rispetto agli altri due, la differenza tra \punto{CVA} e \punto{CVP} è di 12 mm), esiste un \emph{sostanziale accordo} tra le due analisi nella valutazione dell'inclinazione del piano occlusale.
+
+\section{Dimensioni mascellari}
+Questo parametro è stato valutato nelle analisi di Giannì e di Coben. Per il primo, la dimensione sagittale del mascellare superiore è data dalla distanza millimetrica \piano{SNP}{A}, pari a $41 mm$ a 4 anni, con una crescita di $0,5 mm$ annui, fino ad un massimo di $46 mm$ a crescita terminata. Per Coben, tale dimensione è rappresentata della proiezione di \piano{Ptm}{A} sul \punto{BaH}, e viene rapportata in percentuale alla base cranica \piano{Ba}{N} ($51,40 \pm 3,00\%$). In entrambi i casi, valori superiori denotano ipermaxillia, valori inferiori depongono per un'ipomaxillia.
+
+\begin{table}
+\centering
+\caption{Frequenza delle dimensioni mascellari}
+\label{tab:dimensioni_mascellari_frequenze}
+\begin{tabular}{>{\bfseries}ccc}
+\toprule
+& \textbf{Giannì} & \textbf{Coben} \\
+\midrule
+Normo-maxillia & 1 & 22 \\
+Ipomaxillia & 10 & 0 \\
+Ipermaxillia & 18 & 7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La tabella delle frequenze \vref{tab:dimensioni_mascellari_frequenze} mostra già notevoli differenze: Giannì trova una sola normo-maxillia, Coben ne trova ben 22 (su un totale di 29 pazienti). Le due analisi concordano solamente in cinque casi (pazienti \#1, \#8, \#9, \#15 e \#28), e in tre casi danno risultati opposti (ipomaxillia in un caso e ipermaxillia nell'altro, pazienti \#16, \#20 e \#23). La concordanza semplice risulta quindi essere solamente del $17,24\%$, e anche la $\kappa$ di Fleiss indica una grave discordanza, essendo pari al $-31,94\%$. Questa discrepanza è probabilmente dovuta al fatto che, diversamente da altri parametri, in questo caso Giannì fornisce un valore millimetrico preciso, senza alcuna deviazione standard, per cui non esiste un vero \emph{range} di normalità, ma piuttosto una misura precisa.
+
+Tentando di ovviare a questo problema, è possibile introdurre sperimentalmente una \emph{deviazione standard} nell'analisi di Giannì, da 0 a 10, con incrementi di $0,5 mm$. La frequenza risultante è espressa nel grafico \vref{graph:dimensioni_mascellari_gianni_ds}: con deviazione standard pari a $10 mm$ vengono diagnosticate tutte normo-maxillie.
+
+\begin{figure}[ht!]
+\centering
+\input{dati/dimensioni_mascellari_gianni_ds.tex}
+\caption{Variazione delle frequenze delle dimensioni mascellari al variare di $\sigma$}
+\label{graph:dimensioni_mascellari_gianni_ds}
+\end{figure}
+
+Introducendo una deviazione standard al valore proposto da Giannì, solo la concordanza pura raggiunge valori di più del $70\%$; la $\kappa$ di Fleiss è invece generalmente negativa, o con valori di massimo $8,74\%$ quando positiva. Questo indica che esiste una notevole discrepanza, e che l'accordo tra le due analisi è generalmente dovuto al caso. L'andamento dei due tipi di concordanza è rappresentato nel grafico \vref{graph:dimensioni_mascellari_concordanze}.
+
+\begin{figure}[ht!]
+\centering
+\input{dati/dimensioni_mascellari_concordanze.tex}
+\caption{Variazione delle concordanze (pura e $\kappa$ di Fleiss) al variare di $\sigma$}
+\label{graph:dimensioni_mascellari_concordanze}
+\end{figure}
