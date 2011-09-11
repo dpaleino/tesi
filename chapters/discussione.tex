@@ -101,6 +101,42 @@ Coben \punto{B} & 15,33 & 26,44 & 31,89 & 5,83 & 89,31 \\
 Questi dati denotano un'importante discordanza tra le varie analisi considerate.
 
 \section{Altezza facciale inferiore}
+La valutazione dell'altezza facciale inferiore è stata effettuata prendendo in considerazione l'angolo della divergenza di Giannì (piano bispinale - piano mandibolare), e l'altezza facciale inferiore \piano{SNA}{Me} (considerata su \punto{BaV}) secondo Coben. Questo confronto è possibile perché un angolo intermascellare aumentato si riflette in un'aumentata altezza facciale inferiore. Come \emph{gold standard} è stata considerata l'analisi di Giannì. L'ipotesi nulla $H_0$ è che \emph{non esiste alcuna differenza tra le due analisi}.
+
+La tabella \vref{tab:altezza_facciale_inferiore_frequenze} mostra le frequenze nella valutazione dell'altezza facciale inferiore per le due analisi. In questo caso, il test del $\chi^2$ non sarebbe applicabile, in quanto necessita di almeno 5 osservazioni per ogni categoria. Per poter ottenere ciò, è possibile unificare le osservazioni \emph{non-normali}: le frequenze così ottenute sono riportate in tabella \vref{tab:altezza_facciale_inferiore_frequenze_cumulative}.
+
+\begin{table}
+\centering
+\begin{centeredcaptionlabel}{Frequenza delle modifiche all'altezza facciale inferiore}{tab:altezza_facciale_inferiore_frequenze}
+% \label{}
+\begin{tabular}{>{\bfseries}ccc}
+\toprule
+& \textbf{Giannì} & \textbf{Coben} \\
+\midrule
+Normale & 14 & 19 \\
+Diminuita & 0 & 6 \\
+Aumentata & 15 & 4 \\
+\bottomrule
+\end{tabular}
+\end{centeredcaptionlabel}\hfill
+\begin{centeredcaptionlabel}{Frequenza (cumulativa) delle modifiche all'altezza facciale inferiore}{tab:altezza_facciale_inferiore_frequenze_cumulative}
+% \label{}
+\begin{tabular}{>{\bfseries}ccc}
+\toprule
+& \textbf{Giannì} & \textbf{Coben} \\
+\midrule
+Normale & 14 & 19 \\
+Non-normale & 15 & 10 \\
+\bottomrule
+\end{tabular}
+\end{centeredcaptionlabel}
+\end{table}
+
+Il $\chi^2$ (un grado di libertà) è pari a $3,4524$, e il valore $p$ risultante è $0,632$. Questo è superiore al valore standard di $p < 0,05$, il che significa che non c'è alcuna differenza statisticamente significativa tra le due analisi. Essendo molto vicino al valore $p$ limite, però, è possibile affermare che esiste una \emph{significatività pratica}.
+
+Per poter analizzare le frequenze non cumulative, anche in questo caso è necessario valutare la concordanza per singolo paziente, e quindi ricorrere alla \emph{$\kappa$ di Fleiss}. La concordanza semplice è del $34,48\%$; la concordanza depurata dal caso, secondo Fleiss, è del $-17,36\%$. Questo significa che non solo le due analisi concordano poco, ma la concordanza esistente è generalmente dovuta al caso.
+
+La differenza nei risultati è probabilmente dovuta al fatto che l'altezza facciale in Coben è una misura riferita ad un piano perpendicolare al piano di Francoforte: una diversa angolazione di quest'ultimo nei pazienti causa una diversa lettura di una stessa altezza facciale, generando le forti discrepanze rilevate nel corso di questo paragrafo.
 
 \section{Rotazione del piano occlusale}
 Per poter valutare la rotazione del piano occlusale è necessario considerare che l'analisi delle controparti di Enlow non fornisce dei valori di riferimento, per cui bisogna valutare il rapporto delle controparti verticali tra di loro. Per far questo, verrà utilizzato lo \emph{scostamento medio} descritto nel paragrafo \vref{scostamento_medio}. Oltre a questo però, bisogna prendere in considerazione il rapporto tra la componente verticale anteriore e le altre due controparti: se essa è maggiore, il piano occlusale sarà in post-rotazione; se è minore anche di una sola delle due, sarà in antero-rotazione. Per poter definire il tipo di rotazione del piano occlusale, è necessario scegliere un $\varepsilon$ appropriato al di sopra del quale è possibile definire \emph{in squilibrio} le controparti verticali di Enlow, e perciò parlare di una eccessiva inclinazione nell'uno o nell'altro senso.
