@@ -19,16 +19,16 @@ Uno scostamento elevato significherà che i valori sono lontani tra di loro (e q
 
 \section{$\chi^2$ di Pearson}
 \label{sec:chi-square}
-Questo metodo\footcite{Plackett1983} controlla la validità di un'\emph{ipotesi nulla} valutando se la frequenza di distribuzione di certi eventi osservati in un campione è consistente con una particolare distribuzione teorica. Gli eventi considerati devono essere mutualmente esclusivi, ed avere una probabilità complessiva del $100\%$.
+Questo metodo\footcite{Plackett1983} controlla la validità di un'\emph{ipotesi nulla} valutando se la frequenza di distribuzione di certi eventi osservati in un campione è consistente con una particolare distribuzione teorica. Gli eventi considerati devono essere mutualmente esclusivi, ed avere una probabilità complessiva del $100\%$. %Per poter eseguire questo test, inoltre, ogni categoria deve possedere almeno cinque osservazioni.
 
 \begin{equation}
 \label{eq:chi_square}
 \chi^2 = \sum_{i=1}^N \frac{{(O_i-E_i)}^2}{E_i}
 \end{equation}
 
-Il \emph{chi quadro} viene calcolato misurando la differenza tra ogni singola frequenza osservata ($O_i$) e teorica ($E_i$), per ogni possibile categoria, ponendoli al quadrato, dividendoli per la frequenza teorica e sommando i risultati. Una seconda parte nell'esecuzione di questo metodo consiste nello stabilire i \emph{gradi di libertà}, che sono essenzialmente il numero di categorie considerate meno uno.
+Il \emph{chi quadro} viene calcolato misurando la differenza tra ogni singola frequenza osservata ($O_i$) e teorica ($E_i$) per ogni categoria, posta al quadrato, divisa per la frequenza teorica e sommando i risultati. Successivamente è necessario stabilire i \emph{gradi di libertà}, che sono essenzialmente il numero di categorie considerate meno uno per il numero di gruppi di osservazione meno uno.
 
-Questo valore viene quindi ricercato in tabelle precompilate che mettono in relazione il $\chi^2$ al valore $p$: quest'ultimo rappresenta la probabilità di ottenere un risultato pari o più estremo di quello osservato, supposta vera l'ipotesi nulla. Un valore $p$ di 0,05 o minore viene solitamente considerato \emph{statisticamente significativo}, ossia la deviazione osservata dall'ipotesi nulla è significativa.
+Questo valore viene quindi ricercato in tabelle precompilate che mettono in relazione il $\chi^2$ al valore $p$: questo rappresenta la probabilità di ottenere un risultato pari o più estremo di quello osservato, supposta vera l'ipotesi nulla. Un valore $p \le 0,05$ viene considerato il limite per la \emph{significatività statistica}.
 
 \section{$\kappa$ di Fleiss}
 Questo metodo\footcite{Fleiss1971} permette di valutare quanto la concordanza delle valutazioni di due o più osservatori, su un determinato campione, sia dovuto al caso, e stimare quindi la concordanza depurata dal caso stesso.
@@ -37,7 +37,7 @@ Questo metodo\footcite{Fleiss1971} permette di valutare quanto la concordanza de
 \kappa = \frac{\overline{P} - \overline{P}_e}{1 - \overline{P}_e}
 \end{equation}
 
-Il denominatore $1 - \overline{P}_e$ espime il grado di concordanza ottenibile al di fuori del caso; il numeratore $\overline{P} - \overline{P}_e$ esprime la concordanza ottenuta al di fuori del caso. Se le analisi fossero in completo accordo, allora $\kappa = 1$, all'opposto, se non ci fosse accordo, oltre a quello dovuto al caso, si avrebbe $\kappa \leq 0$.
+Il denominatore $1 - \overline{P}_e$ esprime il grado di concordanza ottenibile al di fuori del caso; il numeratore $\overline{P} - \overline{P}_e$ esprime la concordanza ottenuta al di fuori del caso. Se le analisi fossero in completo accordo, allora $\kappa = 1$, all'opposto, se non ci fosse accordo, oltre a quello dovuto al caso, si avrebbe $\kappa \leq 0$.
 
 Sia $N$ il numero totale del campione, $n$ il numero degli osservatori e $k$ il numero di categorie assegnate ai vari componenti del campione. I soggetti vengono numerati da $i = 1, \ldots N$, e le categorie da $j = 1, \ldots k$. Sia $n_{ij}$ il numero di osservatori che hanno assegnato il soggetto $i$ alla categoria $j$.
 
@@ -68,8 +68,7 @@ P_i = \frac{1}{2}[(\sum_{j=1}^k n^2_{ij}) - 2]
 \overline{P} = \frac{1}{2N}(\sum_{i=1}^N\sum_{j=1}^k n^2_{ij} - 2N)
 \end{equation}
 Il valore di $\kappa$ viene valutato in base ad una tabella (\vref*{tab:significato_kappa}), proposta da Landis e Koch\footcite{Landis1977}.
-
-\begin{table}[ht]
+\begin{table}[h!]
 \centering
 \caption{Significato dei valori di $\kappa$}
 \label{tab:significato_kappa}
@@ -87,3 +86,5 @@ $1,00$ & accordo perfetto \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+%\begin{wraptable}{R}{.5\columnwidth}%[ht]
