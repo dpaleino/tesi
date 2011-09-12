@@ -66,6 +66,14 @@
   {\begin{minipage}{\table@width}\centering
    \expandafter\caption\expandafter{\table@caption}
    \box0\end{minipage}}
+\newenvironment{centeredcaptionlabel}[2]
+  {\def\table@caption{#1}%
+   \def\table@label{#2}%
+   \Collect@Body\measure@table}
+  {\begin{minipage}{\table@width}\centering
+   \expandafter\caption\expandafter{\table@caption}%
+   \expandafter\label\expandafter{\table@label}%
+   \box0\end{minipage}}
 \def\measure@table#1{\sbox\z@{#1}\edef\table@width{\the\wd\z@}}
 
 \newcommand{\paziente}[4]{
@@ -96,6 +104,13 @@
 \fbox{\includegraphics[keepaspectratio,width=.85\columnwidth,height=.85\textheight]{./pazienti/tracciati/#2R.pdf}}
 \caption{Analisi antero-posteriore di Ricketts}
 \label{fig:#2R}
+\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\fbox{\includegraphics[keepaspectratio,width=.85\columnwidth,height=.85\textheight]{./pazienti/tracciati/#2C.pdf}}
+\caption{Analisi di Coben}
+\label{fig:#2C}
 \end{figure}
 \clearpage
 }
