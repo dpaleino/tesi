@@ -10,5 +10,5 @@ plot "dimensioni_mascellari.dat" using 1:2 with linespoints title 'Normo', \
 set key bottom right
 set ylabel "{\\rotatebox{90}{\\%}}"
 set output "dimensioni_mascellari_concordanze.tex"
-plot "dimensioni_mascellari.dat" using 1:5 with linespoints title 'Concordanza pura', \
+plot "dimensioni_mascellari.dat" using 1:5 with linespoints title 'Concordanza semplice', \
   "dimensioni_mascellari.dat" using 1:6 with linespoints title '$\kappa$ di Fleiss'
