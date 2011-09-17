@@ -9,7 +9,7 @@ Per quanto riguarda l'analisi di Giannì, è stato valutato l'angolo \angolo{ANB
 
 Dato che non esiste un \emph{gold standard} per il rilevamento della classe scheletrica, sono stati eseguiti tre \emph{test $\chi^2$ di Pearson}, considerando \emph{standard} di volta in volta le tre analisi riferite a valori statistici. L'ipotesi nulla ($H_0$) è, in tutti e tre i casi, che \emph{non esiste alcuna differenza tra le analisi considerate}.
 
-La tabella delle frequenze delle classi scheletriche (\ref{tab:classe_scheletrica_frequenze}) mostra già un'evidente discordanza numerica nel rilevamento delle III classi tra Giannì e le altre analisi.
+La tabella delle frequenze delle classi scheletriche (\ref{tab:classe_scheletrica_frequenze}) mostra già un'evidente discordanza numerica nel rilevamento delle III classi tra Giannì e le altre analisi. Questa tabella, però, non è utilizzabile per il $\chi^2$, in quanto esistono categorie con meno di cinque osservazioni. Verrà quindi utilizzata la tabella delle frequenze cumulative \ref{tab:classe_scheletrica_frequenze_cumulative}.
 
 \begin{table}
 \centering
@@ -26,7 +26,21 @@ III & 7 & 1 & 8 & 3 & 6 & 7 \\
 \end{tabular}
 \end{table}
 
-Calcolando il $\chi^2$ con grado di libertà 2, e il valore $p$ (vedi paragrafo \ref{sec:chi-square} a pagina \pageref{sec:chi-square}) si ottengono le tabelle \ref{tab:classe_scheletrica_chi-quadro} e \ref{tab:classe_scheletrica_p-value} (in evidenza i valori di $p$ statisticamente significativi).
+\begin{table}
+\centering
+\caption{Frequenza cumulativa delle classi scheletriche}
+\label{tab:classe_scheletrica_frequenze_cumulative}
+\begin{tabular}{>{\bfseries}c*{6}{c}}
+\toprule
+Classe & Enlow & Giannì & Wits & Ricketts & Coben \punto{Pog} & Coben \punto{B} \\
+\midrule
+I & 11 & 16 & 13 & 18 & 11 & 9 \\
+II-III & 18 & 13 & 16 & 11 & 18 & 20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Calcolando il $\chi^2$ con grado di libertà 1, e il valore $p$ (vedi paragrafo \ref{sec:chi-square} a pagina \pageref{sec:chi-square}) si ottengono le tabelle \ref{tab:classe_scheletrica_chi-quadro} e \ref{tab:classe_scheletrica_p-value} (in evidenza i valori di $p$ statisticamente significativi).
 
 \begin{table}
 \centering
@@ -36,9 +50,9 @@ Calcolando il $\chi^2$ con grado di libertà 2, e il valore $p$ (vedi paragrafo 
 \toprule
  & \multicolumn{1}{c}{Enlow} & \multicolumn{1}{c}{Giannì} & \multicolumn{1}{c}{Wits} & \multicolumn{1}{c}{Ricketts} & \multicolumn{1}{c}{Coben \punto{Pog}} & \multicolumn{1}{c}{Coben \punto{B}} \\
 \midrule
-Giannì & 37,65 & 0 & 50,90 & 5,58 & 26,56 & 39,15 \\
-Wits & 1,56 & 8,82 & 0 & 5,05 & 2,81 & 4,48 \\
-Ricketts & 9,18 & 3,56 & 9,72 & 0 & 7,72 & 12,96 \\
+Giannì & 3,49 & 0 & 1,25 & 0,56 & 3,49 & 6,83 \\
+Wits & 0,56 & 1,25 & 0 & 3,49 & 0,56 & 2,23 \\
+Ricketts & 7,18 & 0,59 & 3,66 & 0 & 7,18 & 11,86 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -51,16 +65,16 @@ Ricketts & 9,18 & 3,56 & 9,72 & 0 & 7,72 & 12,96 \\
 \toprule
  & \multicolumn{1}{c}{Enlow} & \multicolumn{1}{c}{Giannì} & \multicolumn{1}{c}{Wits} & \multicolumn{1}{c}{Ricketts} & \multicolumn{1}{c}{Coben \punto{Pog}} & \multicolumn{1}{c}{Coben \punto{B}} \\
 \midrule
-Giannì & \cellcolor[gray]{.8} $< 0,0001$ & $1$ & \cellcolor[gray]{.8} $< 0,0001$ & $0,0613$ & \cellcolor[gray]{.8} $< 0,0001$ & \cellcolor[gray]{.8} $< 0,0001$ \\
-Wits & $0,4589$ & \cellcolor[gray]{.8} $0,0122$ & $1$ & $0,0801$ & $0,2457$ & $0,1064$ \\
-Ricketts & \cellcolor[gray]{.8} $0,0101$ & $0,1690$ & \cellcolor[gray]{.8} $0,0077$ & $1$ & \cellcolor[gray]{.8} $0,0210$ & \cellcolor[gray]{.8} $0,0015$ \\
+Giannì & $0,0619$ & $1$ & $0,2626$ & $0,4552$ & $0,0619$ & \cellcolor[gray]{.8} $0,0090$ \\
+Wits & $0,4552$ & $0,2626$ & $1$ & $0,0619$ & $0,4552$ & $0,1353$ \\
+Ricketts & \cellcolor[gray]{.8} $0,0074$ & $0,4440$ & $0,0557$ & $1$ & \cellcolor[gray]{.8} $0,0074$ & \cellcolor[gray]{.8} $0,0005$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Questi dati mettono in evidenza come, considerando \emph{standard} le analisi di Giannì e Ricketts, si ottengano valori $p$ statisticamente significativi quando paragonate con le analisi di Enlow, Wits e Coben. Questo significa che l'\emph{ipotesi nulla} è rigettata per queste tre analisi, ossia le differenze tra le diagnosi effettuate sono \emph{statisticamente significative}. Sembrerebbe che, invece, considerando come standard l'indice di Wits, le differenze siano meno significative, eccezion fatta per l'analisi di Giannì.
+Questi dati mettono in evidenza come, considerando \emph{standard} l'analisi di Giannì, si ottengano valori $p$ \emph{praticamente} significativi per Enlow e Coben \punto{Pog}, e un valore \emph{statisticamente} significativo per Coben \punto{B}. Considerando l'indice di Wits come standard, emergerebbe una differenza praticamente significativa solo con l'analisi di Ricketts. Considerando invece quest'ultima come standard, si osserva una differenza statisticamente significativa con Enlow e Coben, e una differenza praticamente significativa con l'indice di Wits.
 
-Quest'analisi, però, mette a confronto frequenze cumulative: è possibile che tutti i pazienti inseriti in una categoria secondo un'analisi, vengano inseriti in un'altra categoria secondo un'altra analisi. È necessario quindi analizzare la concordanza tra diagnosi per ogni singolo paziente. La tabella \vref{tab:classe_scheletrica_concordanza} mostra le percentuali di concordanza \emph{semplice}, intesa come il rapporto tra il numero di pazienti le cui diagnosi coincidono e il numero totale di soggetti.
+Quest'analisi, però, mette a confronto frequenze cumulative: le II e le III classi vengono considerate insieme, ed è inoltre possibile che tutti o alcuni dei pazienti inseriti in una categoria secondo un'analisi, vengano inseriti in un'altra categoria secondo un'altra analisi. È necessario quindi analizzare la concordanza tra diagnosi per ogni singolo paziente. La tabella \vref{tab:classe_scheletrica_concordanza} mostra le percentuali di concordanza \emph{semplice}, intesa come il rapporto tra il numero di pazienti le cui diagnosi coincidono e il numero totale di soggetti.
 
 \begin{table}
 \centering
